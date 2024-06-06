@@ -12,8 +12,8 @@ container_definition:
   name: 'prometheus'
   memory: '250m'
   cpu: 0.5
-  internal_port: 80
-  external_port: 80
+  internal_port: 9090
+  external_port: 9090
   log_max_file: 5
   log_max_size: '5m'
   replicas: 2
