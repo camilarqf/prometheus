@@ -8,7 +8,7 @@ scrape_configs:
       - targets: ['localhost:9090']
 
   - job_name: 'java-app'
+    metrics_path: /prometheus
     static_configs:
       - targets:
           - 'java-app:8085'
-          
