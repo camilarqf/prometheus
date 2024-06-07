@@ -7,10 +7,18 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-  - job_name: 'java-app'
+  - job_name: 'java-app-prometheus'
     dns_sd_configs:
       - names:
           - 'tasks.java-app'
         type: 'A'
         port: 8080
     metrics_path: '/prometheus'
+
+  - job_name: 'java-app-metrics'
+    dns_sd_configs:
+      - names:
+          - 'tasks.java-app'
+        type: 'A'
+        port: 8080
+    metrics_path: '/actuator/metrics'
