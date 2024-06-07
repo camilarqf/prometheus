@@ -12,5 +12,5 @@ scrape_configs:
       - names:
           - 'tasks.java-app'
         type: 'A'
-        port: 8085
+        port: 8080
     metrics_path: '/prometheus'
